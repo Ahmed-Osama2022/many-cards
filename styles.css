@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0e0e10;
+    color: #fff;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 65%;
+    min-width: fit-content;
+    overflow-x: hidden;
+    margin: 2rem auto 1rem !important;
+    animation: appearY 1s ease-in-out !important;
+}
+
+input,
+button {
+    padding: 1rem;
+    width: auto;
+    background-color: #1f2123;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    outline: none;
+    border: 1px solid #4caf50;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 0 #4caf50;
+}
+
+input:hover,
+button:hover {
+    background-color: #0e0e10;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid transparent;
+    transition: background-color 0.4s,
+        border 0.4s,
+        color 0.4s;
+
+}
+
+button {
+    padding: 0.5rem 1rem;
+}
+
+div {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 8px 0;
+}
+
+h3 {
+    font-size: 1rem;
+    padding: 8px 0;
+    width: 60%;
+    margin: auto;
+    line-height: 1.5rem;
+}
+
+span {
+    color: #00fc00;
+}
+
+#error {
+    color: #fc0000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* NEW CODE */
+    /* grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); */
+    row-gap: 10px;
+    column-gap: 10px;
+
+    /* NEW CODE */
+    max-width: 800px;
+    margin: auto;
+}
+
+.card {
+    padding: 2rem;
+    text-align: center;
+    margin: 10px;
+    background-color: #1f2123;
+    border-radius: 8px;
+    /* box-shadow: 0 1px 3px 0 #f8f6f0; */
+    /* box-shadow: 0 1px 3px 0 #0099ff; */
+    /* box-shadow: 0 1px 3px 0 #62d6c0; */
+    box-shadow: 0 0 3px 0 #4caf50;
+    /* animation: appear 1s ease-in-out; */
+}
+
+.card:hover {
+    box-shadow: 0 0 10px 0 #4caf50;
+
+}
+
+.card:nth-child(even) {
+    animation: appear2 1s ease-in-out;
+}
+
+.card:nth-child(odd) {
+    animation: appear 1s ease-in-out;
+}
+
+@keyframes appearY {
+    from {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes appear {
+    from {
+        transform: translateX(100%) scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes appear2 {
+    from {
+        transform: translateX(-100%) scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+/* New */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
